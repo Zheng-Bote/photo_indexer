@@ -1,0 +1,112 @@
+namespace gallery;
+
+// ---------------- EXIF ----------------
+
+table ExifGps {
+  latitude_ref:string;        // Exif.GPSInfo.GPSLatitudeRef
+  latitude:[double];          // Exif.GPSInfo.GPSLatitude
+  longitude_ref:string;       // Exif.GPSInfo.GPSLongitudeRef
+  longitude:[double];         // Exif.GPSInfo.GPSLongitude
+  altitude_ref:uint8;         // Exif.GPSInfo.GPSAltitudeRef
+  altitude:double;            // Exif.GPSInfo.GPSAltitude
+  timestamp:string;           // Exif.GPSInfo.GPSTimeStamp
+  map_datum:string;           // Exif.GPSInfo.GPSMapDatum
+}
+
+table Exif {
+  make:string;                // Exif.Image.Make
+  model:string;               // Exif.Image.Model
+  datetime:string;            // Exif.Image.DateTime
+  copyright:string;           // Exif.Image.Copyright
+  datetime_original:string;   // Exif.Photo.DateTimeOriginal
+  gps:ExifGps;                // GPS block
+}
+
+// ---------------- IPTC ----------------
+
+table Iptc {
+  date_created:string;        // Iptc.Application2.DateCreated
+  time_created:string;        // Iptc.Application2.TimeCreated
+  city:string;                // Iptc.Application2.City
+  sub_location:string;        // Iptc.Application2.SubLocation
+  province_state:string;      // Iptc.Application2.ProvinceState
+  country_code:string;        // Iptc.Application2.CountryCode
+  country_name:string;        // Iptc.Application2.CountryName
+  copyright:string;           // Iptc.Application2.Copyright
+}
+
+// ---------------- XMP ----------------
+
+table Xmp {
+  address_english:string;     // Xmp.dc.AddressEnglish
+  address_local:string;       // Xmp.dc.AddressLocal
+  country_code:string;        // Xmp.dc.CountryCode
+  rights:string;              // Xmp.dc.rights
+  subject:[string];           // Xmp.dc.subject
+  title:string;               // Xmp.dc.title
+  datetime_original:string;   // Xmp.exif.DateTimeOriginal
+  city:string;                // Xmp.photoshop.City
+  country:string;             // Xmp.photoshop.Country
+  state:string;               // Xmp.photoshop.State
+  ps_country_code:string;     // Xmp.photoshop.CountryCode
+  continent:string;           // Xmp.photoshop.Continent
+  cca2:string;                // Xmp.photoshop.Cca2
+  cca3:string;                // Xmp.photoshop.Cca3
+  capital:string;             // Xmp.photoshop.Capital
+  timezone:string;            // Xmp.photoshop.Timezone
+  copyright_owner:string;     // Xmp.plus.CopyrightOwner
+}
+
+// ---------------- METADATA ----------------
+
+table Metadata {
+  id:ulong;
+  file_path:string;
+  exif:Exif;
+  iptc:Iptc;
+  xmp:Xmp;
+}
+
+table MetadataList {
+  items:[Metadata];
+}
+
+// ---------------- INDEXE ----------------
+
+table IsoEntry {
+  iso:uint32;
+  photo_ids:[ulong];
+}
+
+table DateEntry {
+  date:uint32;               // YYYYMMDD
+  photo_ids:[ulong];
+}
+
+table CameraEntry {
+  camera_model:string;
+  photo_ids:[ulong];
+}
+
+table TagEntry {
+  tag:string;
+  photo_ids:[ulong];
+}
+
+table IndexIso {
+  entries:[IsoEntry];
+}
+
+table IndexDate {
+  entries:[DateEntry];
+}
+
+table IndexCamera {
+  entries:[CameraEntry];
+}
+
+table IndexTags {
+  entries:[TagEntry];
+}
+
+root_type MetadataList;

@@ -1,0 +1,10 @@
+[requires]
+exiv2/0.28.2
+flatbuffers/25.9.23
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout

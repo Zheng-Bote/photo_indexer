@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBOM Security Report</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 2rem; color: #333; }
+  h1 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+  .metadata { background: #f8f9fa; padding: 1rem; border-radius: 5px; margin-bottom: 2rem; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { background-color: #343a40; color: white; }
+  .safe { background-color: #d4edda; }
+  .vuln { background-color: #f8d7da; }
+  .warn { background-color: #fff3cd; }
+  .vuln-title { font-weight: bold; color: #721c24; margin-bottom: 5px; display: inline-block; }
+  .badge { display: inline-block; padding: 0.25em 0.4em; font-size: 75%; font-weight: 700; border-radius: 0.25rem; background: #6c757d; color: white; margin-right: 4px; }
+  details { margin-top: 8px; font-size: 0.9em; }
+  summary { cursor: pointer; font-weight: bold; color: #495057; }
+  summary:hover { color: #000; }
+  ul.clean-list { margin-top: 5px; padding-left: 20px; }
+  ul.clean-list li { margin-bottom: 4px; }
+  a.cve-link { color: #0056b3; text-decoration: none; font-weight: bold; }
+  a.cve-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>SBOM Security Report: Photo-Indexer</h1>
+<div class="metadata">
+  <strong>Scan Date:</strong> 2026-04-14<br>
+  <strong>Generator Tool:</strong> depdiscover v1.4.0
+</div>
+<table>
+  <thead><tr>
+    <th>Package Name</th>
+    <th>Version</th>
+    <th>Fixed Version</th>
+    <th>Type</th>
+    <th>Licenses</th>
+    <th style="width: 90px;">Max Score</th>
+    <th>Security Status</th>
+  </tr></thead>
+  <tbody>
+    <tr class="vuln">
+      <td><strong>exiv2</strong></td>
+      <td>1.00.0.9</td>
+      <td><details><summary>4 Versions</summary><ul class="clean-list"><li><strong>v0.27.5-1</strong></li><li><strong>v0.28.3+dfsg-2</strong></li><li><strong>v0.28.7+dfsg-2</strong></li><li><strong>v0.28.8+dfsg-1</strong></li></ul></details></td>
+      <td>conan</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td><span class="badge" style="background-color:#dc3545; color:white; font-size: 100%;">9.0</span></td>
+      <td><span class="vuln-title">❌ 12 Vulnerabilities</span>
+<details><summary>Show details</summary>
+<ul class="clean-list">
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2018-14338" target="_blank">DEBIAN-CVE-2018-14338</a>: samples/geotag.cpp in the example code of Exiv2 0.26 misuses the realpath fun...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2020-18773" target="_blank">DEBIAN-CVE-2020-18773</a>: An invalid memory access in the decode function in iptc.cpp of Exiv2 0.27.99....</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2020-18774" target="_blank">DEBIAN-CVE-2020-18774</a>: A float point exception in the printLong function in tags_int.cpp of Exiv2 0....</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2020-18898" target="_blank">DEBIAN-CVE-2020-18898</a>: A stack exhaustion issue in the printIFDStructure function of Exiv2 0.27 allo...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2021-32617" target="_blank">DEBIAN-CVE-2021-32617</a>: Exiv2 is a command-line utility and C++ library for reading, writing, deletin...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2024-24826" target="_blank">DEBIAN-CVE-2024-24826</a>: Exiv2 is a command-line utility and C++ library for reading, writing, deletin...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2024-25112" target="_blank">DEBIAN-CVE-2024-25112</a>: Exiv2 is a command-line utility and C++ library for reading, writing, deletin...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2025-54080" target="_blank">DEBIAN-CVE-2025-54080</a>: Exiv2 is a C++ library and a command-line utility to read, write, delete and ...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2025-55304" target="_blank">DEBIAN-CVE-2025-55304</a>: Exiv2 is a C++ library and a command-line utility to read, write, delete and ...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2026-25884" target="_blank">DEBIAN-CVE-2026-25884</a>: Exiv2 is a C++ library and a command-line utility to read, write, delete and ...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2026-27596" target="_blank">DEBIAN-CVE-2026-27596</a>: Exiv2 is a C++ library and a command-line utility to read, write, delete and ...</li>
+  <li style=""><a class="cve-link" href="https://osv.dev/vulnerability/DEBIAN-CVE-2026-27631" target="_blank">DEBIAN-CVE-2026-27631</a>: Exiv2 is a C++ library and a command-line utility to read, write, delete and ...</li>
+</ul>
+</details></td>
+    </tr>
+    <tr class="safe">
+      <td><strong>flatbuffers</strong></td>
+      <td>23.5.26</td>
+      <td>-</td>
+      <td>conan</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td>-</td>
+      <td>✅ Safe</td>
+    </tr>
+    <tr class="">
+      <td><strong>libc.so.6</strong></td>
+      <td></td>
+      <td>-</td>
+      <td>system</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td>-</td>
+      <td>Unknown</td>
+    </tr>
+    <tr class="">
+      <td><strong>libgcc_s.so.1</strong></td>
+      <td></td>
+      <td>-</td>
+      <td>system</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td>-</td>
+      <td>Unknown</td>
+    </tr>
+    <tr class="">
+      <td><strong>libm.so.6</strong></td>
+      <td></td>
+      <td>-</td>
+      <td>system</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td>-</td>
+      <td>Unknown</td>
+    </tr>
+    <tr class="">
+      <td><strong>libstdc++.so.6</strong></td>
+      <td></td>
+      <td>-</td>
+      <td>system</td>
+      <td><span class="badge">UNKNOWN</span></td>
+      <td>-</td>
+      <td>Unknown</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

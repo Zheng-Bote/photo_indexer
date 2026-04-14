@@ -1,0 +1,324 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "exiv2",
+      "purl": "pkg:generic/exiv2@1.00.0.9",
+      "type": "library",
+      "version": "1.00.0.9"
+    },
+    {
+      "bom-ref": "pkg:generic/flatbuffers@23.5.26",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "flatbuffers",
+      "purl": "pkg:generic/flatbuffers@23.5.26",
+      "type": "library",
+      "version": "23.5.26"
+    },
+    {
+      "bom-ref": "pkg:generic/libc.so.6@",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libc.so.6",
+      "purl": "pkg:generic/libc.so.6@",
+      "type": "library",
+      "version": ""
+    },
+    {
+      "bom-ref": "pkg:generic/libgcc_s.so.1@",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libgcc_s.so.1",
+      "purl": "pkg:generic/libgcc_s.so.1@",
+      "type": "library",
+      "version": ""
+    },
+    {
+      "bom-ref": "pkg:generic/libm.so.6@",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libm.so.6",
+      "purl": "pkg:generic/libm.so.6@",
+      "type": "library",
+      "version": ""
+    },
+    {
+      "bom-ref": "pkg:generic/libstdc++.so.6@",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libstdc++.so.6",
+      "purl": "pkg:generic/libstdc++.so.6@",
+      "type": "library",
+      "version": ""
+    }
+  ],
+  "metadata": {
+    "component": {
+      "name": "Photo-Indexer",
+      "type": "application"
+    },
+    "timestamp": "2026-04-14T14:07:20Z",
+    "tools": [
+      {
+        "name": "depdiscover",
+        "vendor": "ZHENG Bote",
+        "version": "1.4.0"
+      }
+    ]
+  },
+  "serialNumber": "urn:uuid:40ca7424-959d-4974-8c18-b6a6bb2c8300",
+  "specVersion": "1.4",
+  "version": 1,
+  "vulnerabilities": [
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2018-14338"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "samples/geotag.cpp in the example code of Exiv2 0.26 misuses the realpath function on POSIX platforms (other than Apple platforms) where glibc is n...",
+      "id": "DEBIAN-CVE-2018-14338",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2020-18773"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "An invalid memory access in the decode function in iptc.cpp of Exiv2 0.27.99.0 allows attackers to cause a denial of service (DOS) via a crafted ti...",
+      "id": "DEBIAN-CVE-2020-18773",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2020-18774"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "A float point exception in the printLong function in tags_int.cpp of Exiv2 0.27.99.0 allows attackers to cause a denial of service (DOS) via a craf...",
+      "id": "DEBIAN-CVE-2020-18774",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2020-18898"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "A stack exhaustion issue in the printIFDStructure function of Exiv2 0.27 allows remote attackers to cause a denial of service (DOS) via a crafted f...",
+      "id": "DEBIAN-CVE-2020-18898",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2021-32617"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. An inefficient algorithm...",
+      "id": "DEBIAN-CVE-2021-32617",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2024-24826"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. An out-of-bounds read wa...",
+      "id": "DEBIAN-CVE-2024-24826",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2024-25112"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. A denial-of-service was ...",
+      "id": "DEBIAN-CVE-2024-25112",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2025-54080"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. An out-of-bounds read w...",
+      "id": "DEBIAN-CVE-2025-54080",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2025-55304"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. A denial-of-service was...",
+      "id": "DEBIAN-CVE-2025-55304",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2026-25884"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
+      "id": "DEBIAN-CVE-2026-25884",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2026-27596"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
+      "id": "DEBIAN-CVE-2026-27596",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    },
+    {
+      "advisories": [
+        {
+          "url": "https://osv.dev/vulnerability/DEBIAN-CVE-2026-27631"
+        }
+      ],
+      "bom-ref": "pkg:generic/exiv2@1.00.0.9",
+      "description": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
+      "id": "DEBIAN-CVE-2026-27631",
+      "ratings": [
+        {
+          "severity": "unknown"
+        }
+      ],
+      "source": {
+        "name": "OSV.dev"
+      }
+    }
+  ]
+}
