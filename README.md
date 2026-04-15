@@ -61,7 +61,7 @@ A high-level overview of the system's architecture can be found in the [Architec
 ```mermaid
 graph TD
     A[Photo Files] --> B[Photo Indexer]
-    B --> C[Exiv2 Metadata Extraction]
+    B --> C[Exiv2/IPTC/XMP Metadata Extraction]
     C --> D[FlatBuffers Serialization]
     D --> E[Metadata.bin]
     D --> F[Indexes: ISO, Date, Camera, Tags]
