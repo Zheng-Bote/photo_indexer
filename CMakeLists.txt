@@ -9,6 +9,13 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# SIMD
+# portable binary:
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mavx2 -mfma")
+# best performance:
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=native -ffast-math -funroll-loops")
+
+
 include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake OPTIONAL)
 
 find_package(exiv2 REQUIRED)
