@@ -105,16 +105,16 @@
       "name": "Photo-Indexer",
       "type": "application"
     },
-    "timestamp": "2026-04-15T08:38:44Z",
+    "timestamp": "2026-04-15T09:32:51Z",
     "tools": [
       {
         "name": "depdiscover",
         "vendor": "ZHENG Bote",
-        "version": "1.4.0"
+        "version": "1.5.2"
       }
     ]
   },
-  "serialNumber": "urn:uuid:aee8873d-abf1-4693-aadb-72600c6baeb5",
+  "serialNumber": "urn:uuid:9e5e5f0c-139b-4c33-aba7-11880b3dda0d",
   "specVersion": "1.4",
   "version": 1,
   "vulnerabilities": [
@@ -129,7 +129,8 @@
       "id": "DEBIAN-CVE-2018-14338",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 9.0,
+          "severity": "critical"
         }
       ],
       "source": {
@@ -147,7 +148,8 @@
       "id": "DEBIAN-CVE-2020-18773",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -165,7 +167,8 @@
       "id": "DEBIAN-CVE-2020-18774",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -183,7 +186,8 @@
       "id": "DEBIAN-CVE-2020-18898",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -201,7 +205,8 @@
       "id": "DEBIAN-CVE-2021-32617",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -219,7 +224,8 @@
       "id": "DEBIAN-CVE-2024-24826",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -237,7 +243,8 @@
       "id": "DEBIAN-CVE-2024-25112",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -255,7 +262,8 @@
       "id": "DEBIAN-CVE-2025-54080",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -273,7 +281,8 @@
       "id": "DEBIAN-CVE-2025-55304",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -291,7 +300,8 @@
       "id": "DEBIAN-CVE-2026-25884",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -309,7 +319,8 @@
       "id": "DEBIAN-CVE-2026-27596",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 7.0,
+          "severity": "high"
         }
       ],
       "source": {
@@ -327,7 +338,8 @@
       "id": "DEBIAN-CVE-2026-27631",
       "ratings": [
         {
-          "severity": "unknown"
+          "score": 5.0,
+          "severity": "medium"
         }
       ],
       "source": {

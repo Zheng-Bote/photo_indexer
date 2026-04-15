@@ -5,6 +5,7 @@
         {
           "fixed_version": "",
           "id": "DEBIAN-CVE-2018-14338",
+          "score": 9.0,
           "severity": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
           "summary": "samples/geotag.cpp in the example code of Exiv2 0.26 misuses the realpath function on POSIX platforms (other than Apple platforms) where glibc is n...",
           "suppressed": false,
@@ -13,6 +14,7 @@
         {
           "fixed_version": "",
           "id": "DEBIAN-CVE-2020-18773",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "An invalid memory access in the decode function in iptc.cpp of Exiv2 0.27.99.0 allows attackers to cause a denial of service (DOS) via a crafted ti...",
           "suppressed": false,
@@ -21,6 +23,7 @@
         {
           "fixed_version": "",
           "id": "DEBIAN-CVE-2020-18774",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "A float point exception in the printLong function in tags_int.cpp of Exiv2 0.27.99.0 allows attackers to cause a denial of service (DOS) via a craf...",
           "suppressed": false,
@@ -29,6 +32,7 @@
         {
           "fixed_version": "",
           "id": "DEBIAN-CVE-2020-18898",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "A stack exhaustion issue in the printIFDStructure function of Exiv2 0.27 allows remote attackers to cause a denial of service (DOS) via a crafted f...",
           "suppressed": false,
@@ -37,6 +41,7 @@
         {
           "fixed_version": "0.27.5-1",
           "id": "DEBIAN-CVE-2021-32617",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. An inefficient algorithm...",
           "suppressed": false,
@@ -45,6 +50,7 @@
         {
           "fixed_version": "0.28.3+dfsg-2",
           "id": "DEBIAN-CVE-2024-24826",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. An out-of-bounds read wa...",
           "suppressed": false,
@@ -53,6 +59,7 @@
         {
           "fixed_version": "0.28.3+dfsg-2",
           "id": "DEBIAN-CVE-2024-25112",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. A denial-of-service was ...",
           "suppressed": false,
@@ -61,6 +68,7 @@
         {
           "fixed_version": "0.28.7+dfsg-2",
           "id": "DEBIAN-CVE-2025-54080",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. An out-of-bounds read w...",
           "suppressed": false,
@@ -69,6 +77,7 @@
         {
           "fixed_version": "0.28.7+dfsg-2",
           "id": "DEBIAN-CVE-2025-55304",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. A denial-of-service was...",
           "suppressed": false,
@@ -77,6 +86,7 @@
         {
           "fixed_version": "0.28.8+dfsg-1",
           "id": "DEBIAN-CVE-2026-25884",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
           "summary": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
           "suppressed": false,
@@ -85,6 +95,7 @@
         {
           "fixed_version": "0.28.8+dfsg-1",
           "id": "DEBIAN-CVE-2026-27596",
+          "score": 7.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
           "summary": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
           "suppressed": false,
@@ -93,6 +104,7 @@
         {
           "fixed_version": "0.28.8+dfsg-1",
           "id": "DEBIAN-CVE-2026-27631",
+          "score": 5.0,
           "severity": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
           "summary": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8...",
           "suppressed": false,
@@ -116,6 +128,7 @@
         {
           "fixed_version": "",
           "id": "SAFE",
+          "score": 0.0,
           "severity": "NONE",
           "summary": "No vulnerabilities found in ecosystem 'Debian'. Checked on 2026-04-15",
           "suppressed": false,
@@ -137,6 +150,7 @@
         {
           "fixed_version": "",
           "id": "SAFE",
+          "score": 0.0,
           "severity": "NONE",
           "summary": "No vulnerabilities found in ecosystem 'Debian'. Checked on 2026-04-15",
           "suppressed": false,
@@ -224,7 +238,7 @@
       "description": "Native C++ Dependency Scanner & SBOM Generator",
       "homepage": "https://github.com/Zheng-Bote/depdiscover",
       "name": "depdiscover",
-      "version": "1.4.0"
+      "version": "1.5.2"
     }
   }
 }
