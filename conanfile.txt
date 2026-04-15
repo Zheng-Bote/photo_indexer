@@ -1,6 +1,7 @@
 [requires]
 exiv2/0.28.2
 flatbuffers/25.9.23
+xxhash/0.8.1
 
 [generators]
 CMakeDeps

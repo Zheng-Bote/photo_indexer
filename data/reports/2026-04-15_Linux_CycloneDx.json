@@ -30,6 +30,20 @@
       "version": "23.5.26"
     },
     {
+      "bom-ref": "pkg:generic/xxhash@0.8.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "xxhash",
+      "purl": "pkg:generic/xxhash@0.8.1",
+      "type": "library",
+      "version": "0.8.1"
+    },
+    {
       "bom-ref": "pkg:generic/libc.so.6@",
       "licenses": [
         {
@@ -91,7 +105,7 @@
       "name": "Photo-Indexer",
       "type": "application"
     },
-    "timestamp": "2026-04-14T14:07:20Z",
+    "timestamp": "2026-04-15T08:38:44Z",
     "tools": [
       {
         "name": "depdiscover",
@@ -100,7 +114,7 @@
       }
     ]
   },
-  "serialNumber": "urn:uuid:40ca7424-959d-4974-8c18-b6a6bb2c8300",
+  "serialNumber": "urn:uuid:aee8873d-abf1-4693-aadb-72600c6baeb5",
   "specVersion": "1.4",
   "version": 1,
   "vulnerabilities": [

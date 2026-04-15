@@ -99,7 +99,9 @@
           "suppression_reason": ""
         }
       ],
-      "headers": [],
+      "headers": [
+        "/usr/include/exiv2/exiv2.hpp"
+      ],
       "libraries": [],
       "licenses": [
         "UNKNOWN"
@@ -115,7 +117,7 @@
           "fixed_version": "",
           "id": "SAFE",
           "severity": "NONE",
-          "summary": "No vulnerabilities found in ecosystem 'Debian'. Checked on 2026-04-14",
+          "summary": "No vulnerabilities found in ecosystem 'Debian'. Checked on 2026-04-15",
           "suppressed": false,
           "suppression_reason": ""
         }
@@ -129,6 +131,29 @@
       "source": "pkgconfig",
       "type": "conan",
       "version": "23.5.26"
+    },
+    {
+      "cves": [
+        {
+          "fixed_version": "",
+          "id": "SAFE",
+          "severity": "NONE",
+          "summary": "No vulnerabilities found in ecosystem 'Debian'. Checked on 2026-04-15",
+          "suppressed": false,
+          "suppression_reason": ""
+        }
+      ],
+      "headers": [
+        "/usr/include/xxhash.h"
+      ],
+      "libraries": [],
+      "licenses": [
+        "UNKNOWN"
+      ],
+      "name": "xxhash",
+      "source": "manifest",
+      "type": "conan",
+      "version": "0.8.1"
     },
     {
       "cves": [],
@@ -192,7 +217,7 @@
       "name": "Photo-Indexer",
       "workspace_root": "/home/zb_bamboo/DEV/__NEW__/Web/CPP_Webgallery/Backends/photo_indexer"
     },
-    "scan_date": "2026-04-14",
+    "scan_date": "2026-04-15",
     "schema_version": "1.2",
     "tool": {
       "author": "ZHENG Bote",
