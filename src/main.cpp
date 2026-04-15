@@ -1,3 +1,21 @@
+/**
+ * SPDX-FileComment: Metadata Extraction and flatbuffer Indexing Component
+ * SPDX-FileType: SOURCE
+ * SPDX-FileContributor: ZHENG Robert
+ * SPDX-FileCopyrightText: 2026 ZHENG Robert
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @file main.cpp
+ * @brief Entry point and logic for metadata extraction and indexing
+ * @version 0.3.0
+ * @date 2026-04-15
+ *
+ * @author ZHENG Robert (robert@hase-zheng.net)
+ * @copyright Copyright (c) 2026 ZHENG Robert
+ *
+ * @license Apache-2.0
+ */
+
 // src/main.cpp
 // SIMD-optimiert via xxHash (XXH3). Optionaler 3. Parameter: output-folder
 // Build recommendation:
@@ -24,23 +42,51 @@ using namespace gallery;
 
 // -------------------- Utilities --------------------
 
+/**
+ * @brief Extracts a string value from EXIF data by key.
+ *
+ * @param exif The Exiv2 ExifData object.
+ * @param key The EXIF key to retrieve.
+ * @return std::string The extracted string, or empty if not found.
+ */
 static inline std::string exifStr(const Exiv2::ExifData &exif,
                                   const char *key) {
   auto it = exif.findKey(Exiv2::ExifKey(key));
   return it == exif.end() ? std::string() : it->toString();
 }
 
+/**
+ * @brief Extracts a string value from IPTC data by key.
+ *
+ * @param iptc The Exiv2 IptcData object.
+ * @param key The IPTC key to retrieve.
+ * @return std::string The extracted string, or empty if not found.
+ */
 static inline std::string iptcStr(const Exiv2::IptcData &iptc,
                                   const char *key) {
   auto it = iptc.findKey(Exiv2::IptcKey(key));
   return it == iptc.end() ? std::string() : it->toString();
 }
 
+/**
+ * @brief Extracts a string value from XMP data by key.
+ *
+ * @param xmp The Exiv2 XmpData object.
+ * @param key The XMP key to retrieve.
+ * @return std::string The extracted string, or empty if not found.
+ */
 static inline std::string xmpStr(const Exiv2::XmpData &xmp, const char *key) {
   auto it = xmp.findKey(Exiv2::XmpKey(key));
   return it == xmp.end() ? std::string() : it->toString();
 }
 
+/**
+ * @brief Extracts a GPS coordinate array (e.g., latitude or longitude) from EXIF data.
+ *
+ * @param exif The Exiv2 ExifData object.
+ * @param key The GPS related EXIF key.
+ * @return std::vector<double> A vector containing the rational values evaluated to double.
+ */
 static inline std::vector<double> gpsArray(const Exiv2::ExifData &exif,
                                            const char *key) {
   std::vector<double> out;
@@ -54,6 +100,13 @@ static inline std::vector<double> gpsArray(const Exiv2::ExifData &exif,
   return out;
 }
 
+/**
+ * @brief Extracts the GPS altitude from EXIF data.
+ *
+ * @param exif The Exiv2 ExifData object.
+ * @param key The GPS altitude EXIF key.
+ * @return double The altitude as a double.
+ */
 static inline double gpsAlt(const Exiv2::ExifData &exif, const char *key) {
   auto it = exif.findKey(Exiv2::ExifKey(key));
   if (it == exif.end())
@@ -62,6 +115,12 @@ static inline double gpsAlt(const Exiv2::ExifData &exif, const char *key) {
   return double(r.first) / r.second;
 }
 
+/**
+ * @brief Parses an ISO 8601 like date string into a uint32_t value (YYYYMMDD).
+ *
+ * @param s String representing the date.
+ * @return uint32_t The parsed date in YYYYMMDD format, or 0 on failure.
+ */
 static inline uint32_t parseDate(const std::string &s) {
   if (s.size() < 10)
     return 0;
@@ -75,6 +134,9 @@ static inline uint32_t parseDate(const std::string &s) {
 
 // -------------------- PhotoMeta --------------------
 
+/**
+ * @brief Structure to hold extracted metadata for a single photo.
+ */
 struct PhotoMeta {
   uint64_t id;
   std::string file;
@@ -103,6 +165,14 @@ struct PhotoMeta {
 
 // -------------------- XXH3 fingerprint --------------------
 
+/**
+ * @brief Generates an ultra-fast XXH3 64-bit fingerprint for a string.
+ *
+ * Uses SIMD internally when compiled with AVX2. Used for building the tag and camera indices.
+ *
+ * @param s The input string to hash.
+ * @return uint64_t The 64-bit hash.
+ */
 static inline uint64_t fingerprint_xxh3(const std::string &s) {
   // XXH3_64bits is extremely fast and uses SIMD internally when compiled with
   // SIMD flags.
@@ -111,6 +181,13 @@ static inline uint64_t fingerprint_xxh3(const std::string &s) {
 
 // -------------------- extract metadata --------------------
 
+/**
+ * @brief Extracts all required metadata (EXIF, IPTC, XMP) from an image file.
+ *
+ * @param id The unique identifier assigned to this photo.
+ * @param p The filesystem path to the photo.
+ * @return PhotoMeta Structure populated with extracted fields, or empty on failure.
+ */
 static PhotoMeta extract_meta(uint64_t id, const fs::path &p) {
   PhotoMeta m;
   m.id = id;
@@ -198,6 +275,13 @@ static PhotoMeta extract_meta(uint64_t id, const fs::path &p) {
 
 // -------------------- main --------------------
 
+/**
+ * @brief Main execution entry point for the photo_indexer.
+ *
+ * @param argc Count of arguments.
+ * @param argv Command line arguments array.
+ * @return int 0 on success, non-zero on failure.
+ */
 int main(int argc, char **argv) {
   if (argc < 3) {
     std::cerr << "Usage: photo_indexer <input-folder> <output-prefix> "

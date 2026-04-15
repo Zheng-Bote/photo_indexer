@@ -61,3 +61,10 @@ The data model is defined in the FlatBuffers schema located at `schemas/metadata
 - **Efficient**: Minimal memory overhead and fast access.
 - **Extendable**: New metadata fields can be added without breaking compatibility.
 - **Standalone**: All necessary information for the gallery backend is contained in the binary files.
+
+## Performance Optimizations
+
+The system integrates state-of-the-art performance primitives:
+- **Concurrency**: Parallel extraction of multi-format media via `std::execution::par`.
+- **String Hashing**: Integrates `xxHash` (`XXH3_64bits`) for robust, ultra-fast generation of string fingerprints (e.g. for tags and camera models).
+- **SIMD / Vectorization**: Optional build-time AVX2 and FMA enablement significantly boosts processing rates, benchmarked through the native test suites (`bench.sh`).

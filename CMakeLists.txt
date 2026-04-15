@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
 project(photo_indexer 
-VERSION 0.2.0
+VERSION 0.3.0
 DESCRIPTION "Photo Indexer - Metadata Extraction and Indexing Service to FlatBuffer"
 HOMEPAGE_URL "https://github.com/Zheng-Bote/photo_indexer"
 LANGUAGES CXX)
